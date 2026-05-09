@@ -376,16 +376,25 @@
      11. burger toggle (mobile)
      ========================================================= */
   const burger = document.querySelector('.nav-burger');
-  if (burger){
+  const navLinks = document.querySelector('.nav-links');
+  if (burger && navLinks){
+    const closeMenu = () => {
+      navLinks.classList.remove('open');
+      burger.classList.remove('is-open');
+      document.body.style.overflow = '';
+    };
     burger.addEventListener('click', () => {
-      const links = document.querySelector('.nav-links');
-      if (!links) return;
-      const isOpen = links.classList.toggle('open');
-      Object.assign(links.style, isOpen
-        ? { display:'flex', flexDirection:'column', position:'fixed', inset:'70px 0 0 0',
-            background:'rgba(12,10,8,.96)', padding:'40px var(--gut)', gap:'24px',
-            backdropFilter:'blur(14px)', zIndex:'40', alignItems:'flex-start' }
-        : { display:'' });
+      const isOpen = navLinks.classList.toggle('open');
+      burger.classList.toggle('is-open', isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+    /* close on link tap */
+    navLinks.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', closeMenu);
+    });
+    /* close if viewport grows past mobile breakpoint */
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 880) closeMenu();
     });
   }
 })();
