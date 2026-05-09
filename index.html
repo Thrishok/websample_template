@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="_your_cafe/restaurant_name — The Art of Indian Dining. A premium template designed for restaurants and cafés." />
+  <title>_your_cafe/restaurant_name — The Art of Indian Dining</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ========== LOADER ========== -->
+  <div class="loader" aria-hidden="true">
+    <div class="loader-inner">
+      <div class="loader-mark">_your_cafe/restaurant_name</div>
+      <div class="loader-track"><div class="loader-fill"></div></div>
+      <div class="loader-percent"><span>0</span>%</div>
+    </div>
+  </div>
+
+  <!-- ========== CUSTOM CURSOR ========== -->
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+
+  <!-- ========== AMBIENT 3D CANVAS ========== -->
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <!-- ========== NAVIGATION ========== -->
+  <header class="nav">
+    <a href="#home" class="nav-brand" data-cursor="hover">
+      <span class="brand-mark">_</span>
+      <span class="brand-word">_your_cafe/restaurant_name</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#story" data-cursor="hover">Story</a>
+      <a href="#menu" data-cursor="hover">Menu</a>
+      <a href="#gallery" data-cursor="hover">Gallery</a>
+      <a href="#voices" data-cursor="hover">Voices</a>
+      <a href="#visit" data-cursor="hover">Visit</a>
+    </nav>
+    <div class="nav-right">
+      <button class="nav-theme" aria-label="Toggle theme" data-cursor="hover">
+        <svg class="icon icon-moon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon icon-sun" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      </button>
+      <a href="#reserve" class="nav-cta" data-cursor="hover">
+        <span>Reserve</span>
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+    <button class="nav-burger" aria-label="Open menu">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="home">
+    <div class="hero-grid">
+
+      <div class="hero-left">
+        <div class="hero-meta">
+          <span class="hero-eyebrow">Est. 1962 — Chennai</span>
+          <span class="hero-divider"></span>
+          <span class="hero-eyebrow">A Heritage Reimagined</span>
+        </div>
+
+        <h1 class="hero-title">
+          <span class="line"><span>The art of</span></span>
+          <span class="line"><span><em>Indian</em> dining</span></span>
+          <span class="line"><span>refined.</span></span>
+        </h1>
+
+        <p class="hero-sub">
+          Slow-cooked spice. Heirloom recipes. A modern table set in the soul of Chennai —
+          where every dish is a memory and every memory, a flavour.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#menu" class="btn btn-primary" data-cursor="hover">
+            <span>Explore the menu</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="#reserve" class="btn btn-ghost" data-cursor="hover">
+            <span>Book a table</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-stack">
+          <figure class="hero-photo hp-1" data-float="1">
+            <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=900&q=80" alt="Plated biryani" loading="eager" />
+          </figure>
+          <figure class="hero-photo hp-2" data-float="2">
+            <img src="https://images.unsplash.com/photo-1606491956689-2ea866880c84?auto=format&fit=crop&w=900&q=80" alt="Crisp dosa" loading="eager" />
+          </figure>
+          <figure class="hero-photo hp-3" data-float="3">
+            <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=80" alt="Filter coffee" loading="eager" />
+          </figure>
+
+          <div class="hero-tag">
+            <span class="tag-label">Chef's pick · today</span>
+            <strong class="tag-name">Saffron Dosa Royale</strong>
+            <span class="tag-arrow">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </span>
+          </div>
+
+          <div class="hero-rings" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="scroll-line"><div class="scroll-line-fill"></div></div>
+    </div>
+  </section>
+
+  <!-- ========== MARQUEE ========== -->
+  <div class="marquee">
+    <div class="marquee-track">
+      <span>Saffron</span><span class="dot">●</span>
+      <span>Cardamom</span><span class="dot">●</span>
+      <span>Smoked Cumin</span><span class="dot">●</span>
+      <span>Curry Leaf</span><span class="dot">●</span>
+      <span>Black Pepper</span><span class="dot">●</span>
+      <span>Coconut</span><span class="dot">●</span>
+      <span>Tamarind</span><span class="dot">●</span>
+      <span>Star Anise</span><span class="dot">●</span>
+      <span>Saffron</span><span class="dot">●</span>
+      <span>Cardamom</span><span class="dot">●</span>
+      <span>Smoked Cumin</span><span class="dot">●</span>
+      <span>Curry Leaf</span><span class="dot">●</span>
+      <span>Black Pepper</span><span class="dot">●</span>
+      <span>Coconut</span><span class="dot">●</span>
+      <span>Tamarind</span><span class="dot">●</span>
+      <span>Star Anise</span><span class="dot">●</span>
+    </div>
+  </div>
+
+  <!-- ========== STORY ========== -->
+  <section class="story" id="story">
+    <div class="section-head">
+      <span class="kicker">01 — Our Story</span>
+      <h2 class="section-title reveal-text">
+        A table built on <em>three generations</em> of fire, patience and hand-ground spice.
+      </h2>
+    </div>
+
+    <div class="story-grid">
+      <div class="story-image-wrap">
+        <div class="story-image" data-parallax-image>
+          <img src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=1400&q=80" alt="Chef plating an Indian dish" loading="lazy" />
+        </div>
+        <div class="story-stamp">
+          <span>Since</span>
+          <strong>1962</strong>
+        </div>
+      </div>
+
+      <div class="story-copy">
+        <p class="reveal-up">
+          What began as a six-seat tiffin counter on Mount Road has, over six decades, become a quiet
+          institution. We still grind our masalas at dawn. We still temper mustard in iron kadais.
+          And we still believe that the best meal is the one cooked unhurriedly.
+        </p>
+        <p class="reveal-up">
+          Our kitchen draws from the rivers of Chettinad, the coasts of Mangalore, the courtyards of
+          old Madras — translated for a table that is contemporary, considered, and deeply rooted.
+        </p>
+        <ul class="story-list">
+          <li class="reveal-up"><span>Heirloom recipes</span><em>Six-decade archive</em></li>
+          <li class="reveal-up"><span>Single-origin spice</span><em>Direct from Kerala farms</em></li>
+          <li class="reveal-up"><span>Slow-fire kitchen</span><em>No microwave, no shortcut</em></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== STATS ========== -->
+  <section class="stats">
+    <div class="stat" data-stat data-target="62">
+      <span class="stat-num">0</span>
+      <span class="stat-label">Years on the<br/>same street</span>
+    </div>
+    <div class="stat" data-stat data-target="148">
+      <span class="stat-num">0</span>
+      <span class="stat-label">Dishes on the<br/>signature menu</span>
+    </div>
+    <div class="stat" data-stat data-target="36">
+      <span class="stat-num">0</span>
+      <span class="stat-label">Native spices<br/>on our shelf</span>
+    </div>
+    <div class="stat" data-stat data-target="2">
+      <span class="stat-num">0</span>
+      <span class="stat-label">Michelin-mentioned<br/>tasting rooms</span>
+    </div>
+  </section>
+
+  <!-- ========== MENU (Horizontal scroll) ========== -->
+  <section class="menu" id="menu">
+    <div class="section-head menu-head">
+      <span class="kicker">02 — Signature Plates</span>
+      <h2 class="section-title reveal-text">
+        A menu read like a <em>letter</em> — slowly, and out loud.
+      </h2>
+      <p class="section-lede reveal-up">Hover any dish for the story behind it. Drag, scroll, or arrow through.</p>
+    </div>
+
+    <div class="menu-rail" data-rail>
+      <div class="menu-track" data-rail-track>
+
+        <article class="dish" data-cursor="hover">
+          <div class="dish-img"><img src="https://images.unsplash.com/photo-1606491956689-2ea866880c84?auto=format&fit=crop&w=900&q=80" alt="Dosa" loading="lazy" /></div>
+          <div class="dish-meta">
+            <span class="dish-no">N° 01</span>
+            <span class="dish-price">₹ 320</span>
+          </div>
+          <h3 class="dish-name">Saffron Dosa Royale</h3>
+          <p class="dish-desc">Aged rice batter, ghee-laced fold, saffron-cashew filling, three heirloom chutneys.</p>
+        </article>
+
+        <article class="dish" data-cursor="hover">
+          <div class="dish-img"><img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=900&q=80" alt="Biryani" loading="lazy" /></div>
+          <div class="dish-meta">
+            <span class="dish-no">N° 02</span>
+            <span class="dish-price">₹ 540</span>
+          </div>
+          <h3 class="dish-name">Dum Biryani — 1962</h3>
+          <p class="dish-desc">Sealed-pot rice, slow-smoked over coal, finished with rose water and fried shallots.</p>
+        </article>
+
+        <article class="dish" data-cursor="hover">
+          <div class="dish-img"><img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=900&q=80" alt="Curry" loading="lazy" /></div>
+          <div class="dish-meta">
+            <span class="dish-no">N° 03</span>
+            <span class="dish-price">₹ 480</span>
+          </div>
+          <h3 class="dish-name">Chettinad Black Pepper</h3>
+          <p class="dish-desc">A 14-spice curry from grandmother's notebook — deep, smoky, unmistakable.</p>
+        </article>
+
+        <article class="dish" data-cursor="hover">
+          <div class="dish-img"><img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=80" alt="Filter coffee" loading="lazy" /></div>
+          <div class="dish-meta">
+            <span class="dish-no">N° 04</span>
+            <span class="dish-price">₹ 140</span>
+          </div>
+          <h3 class="dish-name">Filter Coffee Affogato</h3>
+          <p class="dish-desc">Single-estate Coorg decoction, jaggery cream, poured table-side over kulfi.</p>
+        </article>
+
+        <article class="dish" data-cursor="hover">
+          <div class="dish-img"><img src="https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=900&q=80" alt="Thali" loading="lazy" /></div>
+          <div class="dish-meta">
+            <span class="dish-no">N° 05</span>
+            <span class="dish-price">₹ 720</span>
+          </div>
+          <h3 class="dish-name">The Madras Thali</h3>
+          <p class="dish-desc">Eleven small plates. One long meal. A love letter to the city we live in.</p>
+        </article>
+
+        <article class="dish" data-cursor="hover">
+          <div class="dish-img"><img src="https://images.unsplash.com/photo-1633945274405-b6c8069047b0?auto=format&fit=crop&w=900&q=80" alt="Dessert" loading="lazy" /></div>
+          <div class="dish-meta">
+            <span class="dish-no">N° 06</span>
+            <span class="dish-price">₹ 260</span>
+          </div>
+          <h3 class="dish-name">Mango Mille-Feuille</h3>
+          <p class="dish-desc">Layered Alphonso, cardamom cream, brittle of toasted vermicelli.</p>
+        </article>
+
+      </div>
+      <div class="menu-progress"><div class="menu-progress-fill"></div></div>
+    </div>
+  </section>
+
+  <!-- ========== GALLERY ========== -->
+  <section class="gallery" id="gallery">
+    <div class="section-head">
+      <span class="kicker">03 — Inside the Room</span>
+      <h2 class="section-title reveal-text">
+        The room itself is a course. <em>Quiet, warm, lit like dusk.</em>
+      </h2>
+    </div>
+
+    <div class="gallery-grid">
+      <figure class="g-item g1"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="" loading="lazy" /></figure>
+      <figure class="g-item g2"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=80" alt="" loading="lazy" /></figure>
+      <figure class="g-item g3"><img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=800&q=80" alt="" loading="lazy" /></figure>
+      <figure class="g-item g4"><img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=800&q=80" alt="" loading="lazy" /></figure>
+      <figure class="g-item g5"><img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=800&q=80" alt="" loading="lazy" /></figure>
+      <figure class="g-item g6"><img src="https://images.unsplash.com/photo-1592861956120-e524fc739696?auto=format&fit=crop&w=800&q=80" alt="" loading="lazy" /></figure>
+    </div>
+  </section>
+
+  <!-- ========== TESTIMONIALS ========== -->
+  <section class="voices" id="voices">
+    <div class="section-head centered">
+      <span class="kicker">04 — Voices</span>
+      <h2 class="section-title reveal-text">What guests say after the <em>last spoon</em>.</h2>
+    </div>
+
+    <div class="voices-grid">
+      <blockquote class="voice reveal-up">
+        <p>"The dum biryani arrived sealed in dough. They cracked it at the table. The smell alone deserves a review."</p>
+        <footer><span>Aishwarya R.</span><em>The Hindu — Food</em></footer>
+      </blockquote>
+      <blockquote class="voice reveal-up">
+        <p>"A restaurant that doesn't shout. It hums. And the hum becomes the meal you remember for a year."</p>
+        <footer><span>Karthik V.</span><em>Conde Nast Traveller</em></footer>
+      </blockquote>
+      <blockquote class="voice reveal-up">
+        <p>"Three generations of one family in every plate. You can taste the patience. You can taste the love."</p>
+        <footer><span>Meera S.</span><em>Madras Musings</em></footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ========== RESERVATION ========== -->
+  <section class="reserve" id="reserve">
+    <div class="reserve-grid">
+      <div class="reserve-copy">
+        <span class="kicker">05 — Reserve</span>
+        <h2 class="section-title reveal-text">Hold a <em>seat</em> at our table.</h2>
+        <p class="reveal-up">Walk-ins are welcome. Reservations are loved. Private tasting rooms available for parties up to twelve.</p>
+
+        <div class="reserve-info">
+          <div><span>Hours</span><em>Tue – Sun · 12:00 — 23:00</em></div>
+          <div><span>Address</span><em>[Address Line 1], [Area / Locality], [City] — [PIN]</em></div>
+          <div><span>Phone</span><em>+91 [your phone number]</em></div>
+        </div>
+      </div>
+
+      <form class="reserve-form" id="visit" onsubmit="event.preventDefault(); this.querySelector('.form-success').classList.add('on');">
+        <div class="field"><label>Name</label><input type="text" placeholder="Your full name" required /></div>
+        <div class="field"><label>Phone</label><input type="tel" placeholder="+91" required /></div>
+        <div class="row">
+          <div class="field"><label>Date</label><input type="date" required /></div>
+          <div class="field"><label>Time</label><input type="time" required /></div>
+          <div class="field"><label>Guests</label>
+            <select required>
+              <option>2</option><option>3</option><option>4</option>
+              <option>5</option><option>6</option><option>7+</option>
+            </select>
+          </div>
+        </div>
+        <div class="field"><label>A note for the chef <em>(optional)</em></label><textarea rows="3" placeholder="Allergies, occasions, preferences…"></textarea></div>
+        <button type="submit" class="btn btn-primary btn-block" data-cursor="hover">
+          <span>Confirm reservation</span>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+        <p class="form-success">Thank you. Our maître d' will call to confirm shortly.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer-marquee">
+      <div class="footer-marquee-track">
+        <span>Visit us</span><span>●</span>
+        <span>Reserve a table</span><span>●</span>
+        <span>Visit us</span><span>●</span>
+        <span>Reserve a table</span><span>●</span>
+        <span>Visit us</span><span>●</span>
+        <span>Reserve a table</span><span>●</span>
+      </div>
+    </div>
+
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">_your_cafe/restaurant_name</div>
+        <p>The art of Indian dining, served slowly. A heritage table in the heart of Chennai.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Visit</h4>
+        <p>[Address Line 1],<br/>[Area / Locality], [City] — [PIN]</p>
+        <p>Tue – Sun · 12:00 — 23:00</p>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>+91 [your phone number]</p>
+        <p>hello@yourdomain.com</p>
+      </div>
+      <div class="footer-col">
+        <h4>Follow</h4>
+        <ul class="socials">
+          <li><a href="#" data-cursor="hover">Instagram</a></li>
+          <li><a href="#" data-cursor="hover">Facebook</a></li>
+          <li><a href="#" data-cursor="hover">Zomato</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-base">
+      <span>© _your_cafe/restaurant_name 2026 — A sample template.</span>
+      <span>Designed &amp; built with care · <a href="#" data-cursor="hover">your studio name</a></span>
+    </div>
+  </footer>
+
+  <!-- ========== LIBRARIES ========== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"
+    }
+  }
+  </script>
+
+  <script type="module" src="js/three-scene.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
